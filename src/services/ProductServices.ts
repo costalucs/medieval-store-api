@@ -13,4 +13,14 @@ export default class ProductServices {
     const products = await this.model.getAll();
     return products;
   }
+
+  async insertProduct(prod: Product): Promise<Product> {
+    const product = await this.model.insertProduct(prod);    
+    return product;
+  }
+
+  async findOne(id:number): Promise<Product[]> {
+    const res = await this.model.findOne(id); 
+    return res;
+  }
 }
