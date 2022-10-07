@@ -9,6 +9,9 @@ const orderController = new OrderController();
 app.use(express.json());
 
 app.get('/products', productController.getAll);
+app.get('/products/:id', productController.getOne);
 app.get('/orders', orderController.getAll);
+
+app.post('/products', productController.insertProduct);
 
 export default app;
