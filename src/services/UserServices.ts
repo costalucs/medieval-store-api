@@ -13,4 +13,9 @@ export default class UserServices {
     const result = await this.model.addUser(user);    
     return result;
   }
+
+  async findOne(username: string, password: string): Promise<User> {
+    const [result] = await this.model.findOneLogin(username, password);
+    return result;
+  }
 }

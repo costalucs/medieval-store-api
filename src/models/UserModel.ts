@@ -16,4 +16,10 @@ export default class UserModel {
       .execute<ResultSetHeader>(query, [username, classe, level, password]);
     return { id: insertId, username, classe, level, password };
   }
+
+  async findOneLogin(userName: string, password: string): Promise<User[] | []> {
+    const query = 'SELECT * FROM Trybesmith.Users WHERE username =(?) AND password= (?)';
+    const [user] = await this.connection.execute(query, [userName, password]);
+    return user as User[];
+  }
 }
