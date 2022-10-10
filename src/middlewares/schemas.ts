@@ -24,4 +24,12 @@ const productSchema = Joi.object({
     .required(),
 });
 
-export { userSchema, productSchema };
+const orderSchema = Joi.object({
+  productsIds: Joi.array().items(Joi.number().options({ convert: false }).required())
+    .required().messages({
+      'number.base': '"productsIds" must include only numbers',
+      'array.includesRequiredUnknowns': '"productsIds" must include only numbers',
+    }),
+});
+
+export { userSchema, productSchema, orderSchema };
