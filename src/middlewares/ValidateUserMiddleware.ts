@@ -7,11 +7,9 @@ export default function ValidateUserMiddleware(req: Request, res: Response, next
   const validate = userSchema.validate(user);  
   
   if (validate.error) {
-    if (validate.error?.details[0].type === 'any.required') {
-      return res
-        .status(400).json({ message: validate.error.details[0].message });
-    }
-    return res.status(422).json({ message: validate.error?.details[0].message });
+    const { type, message } = validate.error.details[0];
+    const statusCode = type === 'any.required' ? 400 : 422;
+    return res.status(statusCode).json({ message });
   }
   
   return next();
