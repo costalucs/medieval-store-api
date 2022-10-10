@@ -23,6 +23,6 @@ app.get('/orders', orderController.getAll);
 app.post('/products', validateProductMiddleware, productController.insertProduct);
 app.post('/users', ValidateUserMiddleware, userController.insertUser);
 app.post('/login', LoginMiddleware, loginController.login);
-app.put('/orders', validateToken, validateOrderMiddleware, orderController.addOrder);
+app.post('/orders', validateToken, validateOrderMiddleware, orderController.addOrder);
 
 export default app;

@@ -12,7 +12,7 @@ export default class OrderModel {
     const result = await this.connection
       .execute(`
       SELECT orders.id, orders.userId, JSON_ARRAYAGG(products.id) as productsIds
-      FROM productsIds as orders
+      FROM Trybesmith.Orders as orders
       INNER JOIN Trybesmith.Products as products
       ON orders.id = products.orderId
       GROUP BY orders.id
