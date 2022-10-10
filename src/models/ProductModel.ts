@@ -27,4 +27,10 @@ export default class ProcuctModel {
       .execute<ResultSetHeader>(query, [name, amount]);
     return { id: insertId, name, amount };
   }
+
+  async updateProducts(productId: number, orderId: number): Promise<number> {
+    await this.connection
+      .execute('UPDATE Trybesmith.Products SET orderId=(?) WHERE id=(?)', [orderId, productId]);
+    return productId;
+  }
 }

@@ -23,4 +23,11 @@ export default class ProductServices {
     const res = await this.model.findOne(id); 
     return res;
   }
+
+  async update(productsId: number[], orderId: number): Promise<number[]> {
+    const prodIds = await Promise.all(
+      productsId.map(async (itemId) => this.model.updateProducts(itemId, orderId)),
+    );
+    return prodIds;
+  }
 }
