@@ -142,8 +142,15 @@ npm start
     }
     ```
 </details>
-- `Funcionalidade 6`: descrição da funcionalidade 6
-- 
+- `endpoint para o cadastro de um pedido`: 
+- O endpoint deve ser acessível através do caminho (`/orders`) com o método POST;
+- Um pedido só pode ser criado caso a pessoa usuária esteja logada e o token `JWT` validado;
+- O endpoint deve receber a seguinte estrutura:
+```json
+  {
+    "productsIds": [1, 2]
+  }
+```
 
 <!-- Olá, Tryber!
 
