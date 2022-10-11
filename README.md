@@ -1,44 +1,39 @@
 # 🚧 README em construção 🚧
-## :hammer_and_wrench: Installation and execution/Instalação e execução
+Para rodar está aplicação é necessário ter **Git**, **Docker** e o **Docker Compose** instalados no seu computador. O Docker Compose precisa estar na versão **1.29** ou superior.
 
-<details>
-  <summary markdown="span"><strong>:us: English</strong></summary><br />
-
-To run this application you need to have **Git**, **Docker** and **Docker Compose** installed on your machine. Docker Compose needs to be at **1.29** version or superior.
-
-### 1 - Clone the repository
+### 1 - Clone o repositório
 ```sh
 git clone git@github.com:raphaelalmeidamartins/trybesmith.git
 ```
 
-### 2 - Run the containers by running the command below in the application folder
+### 2 - Rode os containers executando o comando abaixo na pasta raiz da aplicação
 ```sh
-docker-compose up -d --buid
+docker-compose up -d --build
 ```
 
-### 3 - Run the SQL Script to create the database
+### 3 - Execute o script SQL para criar o banco de dados
 
-Connect to the MySQL server running on the 3306 port using a MySQL client of your choice. With the following credentials:
+Conecte ao servidor MySQL rodando na porta 3306 usando um cliente MySQL de sua preferência. Utilize as seguintes credenciais:
 
 * host: `db`
 * user: `root`
 * password: `password`
 
-Then, in the client, run the script in the `Trybesmith.sql` file.
+Então, no cliente, rode o script que está no arquivo `Trybesmith.sql`.
 
-### 4 - Run this command to attach the container to your terminal
+### 4 - Rode o comando para abrir o terminal do container trybesmith
 ```sh
 docker exec -it trybesmith bash
 ```
 
-### 5 - On the attached container, install the dependencies and run the application
+### 5 - No terminal do container, installe as dependências e execute a aplicação
 
-Install the dependencies:
+Instalando dependências:
 ```sh
 npm install
 ```
 
-Run the application:
+Executando aplicação:
 ```sh
 npm start
 ```
