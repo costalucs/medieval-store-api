@@ -91,7 +91,57 @@ npm start
 ```
 4 - `Endpoint para listar todos os pedidos`: 
 - O endpoint está acessível através do caminho (`/orders`) com o método GET.
-- `Funcionalidade 5`: descrição da funcionalidade 5
+- `Endpoint para o login de pessoas usuárias`: 
+- Endpoint responsável por gerar um token.
+- O endpoint deve ser acessível através do caminho (/login) com o método POST.
+- O endpoint deve receber a seguinte estrutura:
+```json
+  {
+    "username": "string",
+    "password": "string"
+  }
+```
+<details close>
+ <summary>Além disso, as seguintes verificações serão feitas:</summary>
+
+  <br>
+
+  > 👉 Para caso haja problemas no login
+  - **[Será validado que o campo "username" é enviado]**
+    - Se o _login_ não tiver o campo "username", o resultado retornado deverá ser um _status http_ `400` e
+    ```json
+      { "message": "\"username\" is required" }
+    ```
+
+  - **[Será validado que o campo "password" é enviado]**
+    - Se o _login_ não tiver o campo "password", o resultado retornado deverá ser um _status http_ `400`
+    ```json
+      { "message": "\"password\" is required" }
+    ```
+
+  - **[Será validado que não é possível fazer login com um username inválido]**
+    - Se o _login_ tiver o username inválido, o resultado retornado deverá ser um _status http_ `401` e
+    ```json
+      { "message": "Username or password invalid" }
+    ```
+
+  - **[Será validado que não é possível fazer login com uma senha inválida]**
+    - Se o login tiver a senha inválida, o resultado retornado deverá ser um _status http_ `401` e
+    ```json
+      { "message": "Username or password invalid" }
+    ```
+
+  <br>
+
+  > 👉 Para caso os dados sejam enviados corretamente
+  - **[Será validado que é possível fazer login com sucesso]**
+    - Se o login foi feito com sucesso, o resultado deverá ser um _status http_ `200` e deverá retornar um _token_:
+    ```json
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+    }
+    ```
+</details>
 - `Funcionalidade 6`: descrição da funcionalidade 6
 - 
 
