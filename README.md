@@ -30,7 +30,17 @@
       }
     ]
     ```
-- `Funcionalidade 2a`: descrição da funcionalidade 2a relacionada à funcionalidade 2
+- `Endpoint para o cadastro de pessoas usuárias`: 
+- O endpoint está acessível através do caminho (`/users`);
+- O endpoint deve receber a seguinte estrutura:
+```json
+{ 
+  "username": "MAX",
+  "classe": "swordsman",
+  "level": 10,
+  "password": "SavingPeople"
+}
+```
 - `Funcionalidade 3`: descrição da funcionalidade 3
 
 <!-- Olá, Tryber!
