@@ -2,11 +2,11 @@
 
 ## :page_with_curl: Sobre
 
-<details>
+
   API RESTful utilizando Node, Express, TypeScript, utilizando a arquitetura MSC (MODEL-SERVICE-CONTROLER), MySQL para armazenar os dados. Consiste em uma API de uma loja de itens medievais.
 
 <br />
-</details>
+
 ## :hammer_and_wrench: Instalação e execução
 Para rodar está aplicação é necessário ter **Git**, **Docker** e o **Docker Compose** instalados no seu computador. O Docker Compose precisa estar na versão **1.29** ou superior.
 
