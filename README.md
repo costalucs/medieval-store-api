@@ -1,4 +1,6 @@
 # 🚧 README em construção 🚧
+
+## :hammer_and_wrench: Instalação e execução
 Para rodar está aplicação é necessário ter **Git**, **Docker** e o **Docker Compose** instalados no seu computador. O Docker Compose precisa estar na versão **1.29** ou superior.
 
 ### 1 - Clone o repositório
