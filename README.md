@@ -1,7 +1,7 @@
 # 🚧 README em construção 🚧
 # :hammer: Funcionalidades do projeto
 
-- `Endpoint para o cadastro de produtos`: 
+1 `Endpoint para o cadastro de produtos`: 
 - O endpoint está acessível através do caminho (`/products`) com o método POST;
 - Os produtos enviados devem são salvos na tabela `Products` do banco de dados;
 - O endpoint deve receber a seguinte estrutura:
@@ -11,7 +11,7 @@
     "amount": "30 peças de ouro"
   }
 ```
-- `Endpoint para a listagem de produtos`: 
+2 `Endpoint para a listagem de produtos`: 
 - O endpoint deve ser acessível através do caminho (`/products`) com o método GET;
 - O resultado retornado para listar produtos com sucesso deverá ser conforme exibido abaixo, com um _status http_ `200`:
     ```json
@@ -30,7 +30,7 @@
       }
     ]
     ```
-- `Endpoint para o cadastro de pessoas usuárias`: 
+3 `Endpoint para o cadastro de pessoas usuárias`: 
 - O endpoint está acessível através do caminho (`/users`);
 - O endpoint deve receber a seguinte estrutura:
 ```json
