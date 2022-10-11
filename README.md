@@ -3,7 +3,7 @@ Para rodar está aplicação é necessário ter **Git**, **Docker** e o **Docker
 
 ### 1 - Clone o repositório
 ```sh
-git clone git@github.com:raphaelalmeidamartins/trybesmith.git
+git clone git@github.com:costalucs/medieval-store-api.git
 ```
 
 ### 2 - Rode os containers executando o comando abaixo na pasta raiz da aplicação
